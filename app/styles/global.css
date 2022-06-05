@@ -1,19 +1,11 @@
-body {
-    background: #000;
-    color: #fff;
-    font-family: system-ui;
+header{
     display: grid;
-    place-content: center;
-    height: 100vh;
-}
-
-h1 {
     text-align: center;
-    font-size: 5rem;
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -.06em;
-    margin: 0 0 16px;
 }
-
-
+header nav {
+    overflow: hidden;
+}
+nav a
+{
+    text-decoration:none !important;
+}
