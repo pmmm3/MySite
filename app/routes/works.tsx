@@ -1,3 +1,3 @@
 export default function Works () {
-  return <h1>Works</h1>
+  return <h1>Proyectos</h1>
 }

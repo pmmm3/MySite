@@ -1,6 +1,6 @@
-import type { MetaFunction } from '@remix-run/node';
+import type { MetaFunction } from '@remix-run/node'
+import image404 from '~/assets/404/16.png';
 import {
-  Link,
   Links,
   LiveReload,
   Meta,
@@ -8,16 +8,15 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useCatch,
-} from '@remix-run/react';
-
-import globalStyles from '~/styles/global.css';
+  useCatch
+} from '@remix-run/react'
+import globalStyles from '~/styles/global.css'
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
   title: 'New Remix App',
   viewport: 'width=device-width,initial-scale=1'
-});
+})
 export const links = () => [
   {
     rel: 'stylesheet',
@@ -27,7 +26,7 @@ export const links = () => [
     rel: 'stylesheet',
     href: 'https://cdn.simplecss.org/simple.css'
   }
-];
+]
 function Layout () {
   return (
     <>
@@ -37,8 +36,8 @@ function Layout () {
           <NavLink to='' end>
             Inicio
           </NavLink>
-          <NavLink to='/works'>Trabajos</NavLink>
-          <NavLink to='/skills'>Skills</NavLink>
+          <NavLink to='/skills'>Mis habilidades</NavLink>
+          <NavLink to='/works'>Proyectos</NavLink>
           <a href='~/pdfs/sample.pdf' download>
             Curriculum en PDF
           </a>
@@ -49,10 +48,10 @@ function Layout () {
         <small> &copy; Copyright 2022 PabloMoreno.</small>
       </footer>
     </>
-  );
+  )
 }
 
-export default function App() {
+export default function App () {
   return (
     <html lang='es'>
       <head>
@@ -67,10 +66,10 @@ export default function App() {
         <LiveReload />
       </body>
     </html>
-  );
+  )
 }
-export function CatchBoundary() {
-  const caught = useCatch();
+export function CatchBoundary () {
+  const caught = useCatch()
 
   return (
     <html>
@@ -84,7 +83,7 @@ export function CatchBoundary() {
         <img
           alt={caught.status + ' ' + caught.statusText}
           width='100%'
-          src='assets/404/16.png'
+          src={image404}
         />
         <Scripts />
       </body>

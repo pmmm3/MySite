@@ -1,0 +1,21 @@
+.imgMe
+{
+    border: 2.5px solid snow;
+    border-radius: 50%;
+}
+.container-f-t
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    text-align: center;
+}
+@media (max-width: 600px){
+    .container-f-t
+    {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}
