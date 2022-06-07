@@ -1,4 +1,4 @@
-export default function Skills () {
+export default function Contact () {
   return (
     <div className='App'>
       <video width='750' height='500' controls>

@@ -1,3 +1,9 @@
 export default function Works () {
-  return <h1>Proyectos</h1>
+  return (
+    <div className='App'>
+      <video width='750' height='500' controls>
+        <source src='~/assets/workin.mp4' type='video/mp4' />
+      </video>
+    </div>
+  )
 }

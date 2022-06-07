@@ -1,5 +1,5 @@
-import type { MetaFunction } from '@remix-run/node'
-import image404 from '~/assets/404/16.png';
+
+import image404 from '~/assets/404/16.png'
 import {
   Links,
   LiveReload,
@@ -11,6 +11,7 @@ import {
   useCatch
 } from '@remix-run/react'
 import globalStyles from '~/styles/global.css'
+import type { MetaFunction } from '@remix-run/node'
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
@@ -27,6 +28,10 @@ export const links = () => [
     href: 'https://cdn.simplecss.org/simple.css'
   }
 ]
+const disableClick = (e : any) => {
+  e.preventDefault()
+  alert('Work in progress')
+}
 function Layout () {
   return (
     <>
@@ -36,9 +41,20 @@ function Layout () {
           <NavLink to='' end>
             Inicio
           </NavLink>
-          <NavLink to='/skills'>Mis habilidades</NavLink>
-          <NavLink to='/works'>Proyectos</NavLink>
-          <a href='~/pdfs/sample.pdf' download>
+          <NavLink to='/skills' onClick={disableClick}>
+            Mis habilidades
+          </NavLink>
+          <NavLink to='/works' onClick={disableClick}>
+            Proyectos
+          </NavLink>
+          <NavLink to='/contact' onClick={disableClick}>
+            Contacto
+          </NavLink>
+          <a
+            href='app/assets/pdf/curriculum.pdf'
+            download
+            onClick={disableClick}
+          >
             Curriculum en PDF
           </a>
         </nav>
@@ -88,5 +104,5 @@ export function CatchBoundary () {
         <Scripts />
       </body>
     </html>
-  );
+  )
 }

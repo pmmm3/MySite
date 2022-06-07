@@ -11,11 +11,23 @@
     align-items: center;
     column-gap: 20px;
     text-align: center;
+    margin: 4%;
 }
 @media (max-width: 600px){
     .container-f-t
     {
+        margin : 0;
         flex-direction: column;
         row-gap: 10px;
     }
+        .imgMe {
+            margin-top: 2%;
+            width: 100%;
+        }
+}
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
 }
